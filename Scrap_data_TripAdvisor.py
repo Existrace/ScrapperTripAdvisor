@@ -18,7 +18,7 @@ list_linksDone = []
 list_LinksNotDone = []
 list_linkToDelete = []
 # Chemin des deux fichiers CSV de liens
-path_LinksNotDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/links_waitinglist.csv"
+path_LinksNotDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/Scrapping_ouest/links_waitinglist.csv"
 path_linksDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/linksDone.csv"
 
 
@@ -26,7 +26,7 @@ path_linksDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/li
 # path_linksDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvToulouse/linksDone.csv"
 
 # path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/Bordeaux_TripAdvisor.csv"
-path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvParis/Paris_TripAdvisor.csv"
+path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/Scrapping_ouest/BasseNormandie_TripAdvisor.csv"
 # path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvToulouse/Toulouse_TripAdvisor.csv"
 # Converti le fichier CSV des liens non parcourus en une liste
 with open(path_LinksNotDone, 'r') as f:

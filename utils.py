@@ -45,12 +45,13 @@ def scrap_data(browser):
         adresse = browser.find_element_by_class_name(
             'detail  ui_link level_4').text
 
-    if adresse:
-        # Il faut que j'ajoute une dernière colonne du code postal
-        # En faisant une regex dans adresse
-        pattern = "[0-9]{5}"
-        code_postal = re.search(pattern, adresse)
-        code_postal.group()
+    # Il faut que j'ajoute une dernière colonne du code postal
+    # En faisant une regex dans adresse
+    pattern = "[0-9]{5}"
+    try:
+        code_postal = re.search(pattern, adresse).group()
+    except AttributeError:
+        code_postal = ""
 
     try:
         # E-mail
