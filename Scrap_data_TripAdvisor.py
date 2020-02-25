@@ -18,15 +18,15 @@ list_linksDone = []
 list_LinksNotDone = []
 list_linkToDelete = []
 # Chemin des deux fichiers CSV de liens
-# PROBLEME DANS L'ECRITURE DE CE FICHIER ==>
 path_LinksNotDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/links_waitinglist.csv"
 path_linksDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/linksDone.csv"
+
 
 # path_LinksNotDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvToulouse/links_waitinglist.csv"
 # path_linksDone = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvToulouse/linksDone.csv"
 
 # path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/Bordeaux_TripAdvisor.csv"
-path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvBordeaux/Bordeaux_TripAdvisor.csv"
+path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvParis/Paris_TripAdvisor.csv"
 # path_AllData = "/home/snourry/Documents/drive-download-20200106T103458Z-001/CsvToulouse/Toulouse_TripAdvisor.csv"
 # Converti le fichier CSV des liens non parcourus en une liste
 with open(path_LinksNotDone, 'r') as f:
@@ -75,7 +75,7 @@ try:
 
             nblink = nblink + 1
             browser.get(link)
-            time.sleep(2)
+            time.sleep(1)
             print("Execution du lien N° " + str(nblink))
 
             with open(path_AllData, 'a') as file_1:
@@ -102,6 +102,7 @@ try:
         else:
             print("Ne pas executer, le lien se trouve déjà dans les liens parcourus validés.")
             nblink = nblink + 1
+            print("Execution du lien N° " + str(nblink))
             # list_LinksNotDone.remove(link)
             list_linkToDelete.append(link)
 
